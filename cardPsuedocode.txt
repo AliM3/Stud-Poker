@@ -1,0 +1,194 @@
+main
+{
+
+Get user input
+validate input
+if valid, run program
+else END program
+
+program:
+	convert input to a number
+	Number of cards in hand will always be five
+
+	create random number generator
+
+	create an empty deck
+
+	create the hands that will hold the cards
+
+	fill the deck with cards and display them
+
+	shuffle the deck
+
+	show the deck again
+
+	deal the cards to each player
+
+	show the cards in the deck and hands	
+	
+	Sort the hands according to rank
+
+	Display the hands again
+
+	Find the highest rank and show the winner
+
+	Test all types of hands in seperate function
+
+END main
+}
+
+
+
+FUNCTIONS
+
+boolean validate
+{
+	get the input
+	Check if the number of inputs is exactly 3
+	
+	convert the input into an integer using strtol
+	
+	check if the conversion worked properly
+
+	return 0 if anything fails
+
+	return 1 if it works
+}
+
+makeDeck
+{
+
+	make const arrays with the strings of the card
+
+	fill the array with every combination of the array
+	of suits and array of faces
+}
+
+showCards(deck[])
+{
+	print each value in the array provide
+
+}
+
+showHands(players' hand[][])
+{
+	for each player
+	{
+		for each card the player has
+		{
+			print the values of the card
+		}
+	
+		print new line
+	}
+}
+
+shuffle(deck[])
+{
+	current card;
+	card to switch with;
+
+	for each card in the deck
+	{
+		card to switch with = random index in the deck
+		swap the two cards
+	}
+}
+
+
+deal(players, cards per hand, deck[], hands[][])
+{
+	for each player
+	{
+		for each card player needs ( < per hand)
+		{
+			hands[player][current] = deck[current]
+		}
+	}
+
+	remove the cards
+	get the number of cards "left" and copy
+	onto the first index. Limit number of cards
+	that can be printed since array cannot be deleted
+}
+
+sort the hands(hands[][])
+{
+	Use selection sort algorithm
+
+	since it is diifcult to get the ranks hrough strings
+	Place an integer to represent the rank when constructing
+	the cards
+
+	Use the integer for the sort
+}
+
+Find the rank of the hand(hands[][])
+{
+	create variables to hold all the data
+	of the cards a player has (5)
+
+	Create integer values to represent the suits and faces
+
+	Compare each card to find rank in order
+
+	If Straight
+
+	If Flush
+		if Straight Flush
+		else Normal Flush
+
+	else if pairs
+		
+		if at least two pairs
+			if four cards match
+			else if Full House
+			else Two pairs
+		
+		else if three cards match
+
+		else Normal pair
+
+	else High card
+
+	Add points to each player based on rank
+}
+
+find highest number of points
+{
+	For each player
+
+		get rank and compare to max
+	
+	print players that have the same value
+	as max
+}
+
+
+
+HEADER
+
+#include <stdio.h>
+#include <stdlib.h>    //Used to verify input
+#include <time.h>      //Used for random number generator
+
+Define deck size
+	faces
+	suits
+	the poker ranks
+	cards for each player
+	index of argv(s)
+	Input ranges
+
+struct card
+{
+	string suit
+	string face
+
+	int suit
+	int face
+}
+
+enums for suits, faces, five cards, poker ranks
+
+prototypes
