@@ -1,13 +1,6 @@
 /*=============================================================================  
 |   Source code:  cardFunctions.c
 |        Author:  Ali Mohammad
-|    Student ID:  5914999  
-|    Assignment:  Program #4 Stud Poker
-|  
-|        Course:  COP 4338 (Programming III)   
-|       Section:  U03
-|    Instructor:  William Feild  
-|      Due Date:  October 23, 2018, at the beginning of class
 |
 |	I hereby certify that this collective work is my own
 |	and none of it is the work of any other person or entity.
